@@ -3,21 +3,22 @@ package VetorUsuario;
 import java.util.Date;
 public class Usuario {
 
-    private int id;
+    private long id;
     private String nome, email, telefone, senha;
     private Date dataCadastro;
 
-    public Usuario(String nome,String senha) {
+    public Usuario(long id, String nome,String senha) {
+        this.id = id;
         this.nome = nome;
         this.senha = senha;
         this.dataCadastro = new Date();
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -60,4 +61,15 @@ public class Usuario {
     public void setDataCadastro(Date dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
+
+    public int compareTo(Usuario user){
+        if (this.getId()<user.getId()){
+            return -1;
+        }
+        if(this.getId()>user.getId()){
+            return -1;
+        }
+        return 0;
+    }
+
 }

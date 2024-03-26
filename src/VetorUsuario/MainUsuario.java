@@ -25,9 +25,9 @@ public class MainUsuario {
         lista.add("Predo");
 
         List<Usuario> list = new ArrayList<Usuario>();
-        Usuario jose = new Usuario("Jose", "123");
-        Usuario maria = new Usuario("Maria", "123");
-        Usuario pedro = new Usuario("Pedro", "123");
+        Usuario jose = new Usuario(01, "Jose", "1a2b3c");
+        Usuario maria = new Usuario(02, "Maria", "123abc");
+        Usuario pedro = new Usuario(03, "Pedro", "abc123");
         list.add(jose);
         list.add(maria);
         list.add(pedro);
@@ -43,6 +43,10 @@ public class MainUsuario {
         for (Usuario usuario : list) {
             System.out.println("Nome: " + usuario.getNome());
         }
+
+        System.out.println("");
+
+        System.out.println(pedro.compareTo(jose));
 
     }
 
