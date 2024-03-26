@@ -1,6 +1,9 @@
 package VetorUsuario;
 
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 public class Usuario {
 
     private long id;
@@ -70,6 +73,17 @@ public class Usuario {
             return -1;
         }
         return 0;
+    }
+
+    public static List<Usuario> remover(String nome, List<Usuario> list){
+        Iterator<Usuario> iterator = list.iterator();
+        while (iterator.hasNext()){
+            Usuario usuario = iterator.next();
+            if(usuario.getNome() == nome){
+                iterator.remove();
+            }
+        }
+        return list;
     }
 
 }

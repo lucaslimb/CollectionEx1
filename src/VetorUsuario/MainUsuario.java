@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import static VetorUsuario.Usuario.remover;
+
 public class MainUsuario {
 
     public static void main(String[] args) {
@@ -50,14 +52,5 @@ public class MainUsuario {
 
     }
 
-    public static List<Usuario> remover(String nome, List<Usuario> list){
-        Iterator<Usuario> iterator = list.iterator();
-        while (iterator.hasNext()){
-            Usuario usuario = iterator.next();
-            if(usuario.getNome() == nome){
-                iterator.remove();
-            }
-        }
-        return list;
-    }
+
 }
